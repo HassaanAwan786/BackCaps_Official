@@ -37,19 +37,19 @@ const Home = () => {
                             <div className="collapse links_gap navbar-collapse justify-content-center nav-padding" id="navbarText">
                                 <ul className="navbar-nav d-flex justify-content-center align-items-center mb-2 ">
                                     <li className="nav-item">
-                                        <Link className="nav-link" aria-current="page" to="/">Home</Link>
+                                        <Link className="nav-link text-white" aria-current="page" to="/">Home</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to="/about">About</Link>
+                                        <Link className="nav-link text-primary" to="/about">About</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">Our Services</a>
+                                        <Link className="nav-link text-primary" href="#">Our Services</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">Teams</a>
+                                        <Link className="nav-link text-primary" href="#">Teams</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">Contact Us</a>
+                                        <Link className="nav-link text-primary" href="#">Contact Us</Link>
                                     </li>
                                 </ul>
                                 <span className="collapse navbar-collapse d-flex justify-content-end logo_gap" id="navbarIcons">
