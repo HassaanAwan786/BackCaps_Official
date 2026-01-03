@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../styles/style.css'; // Importing loose css file for now
 import ring from '../assets/ring.png';
 import c1 from '../assets/c1.png';
@@ -9,7 +8,7 @@ import c4 from '../assets/c4.png';
 import firstImg from '../assets/first.png';
 import secondImg from '../assets/second_img.svg';
 import Header from '../components/Header';
-
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
@@ -21,9 +20,9 @@ const Home = () => {
                     <Header />
                 </div>
 
-                <div className="container2">
+                <div className="container2" style={{ paddingTop: '100px' }}>
                     <div className="row">
-                        <div className="col-12 col-lg-6 order-2 order-lg-1 pt-5 ps-4 mt-lg-5 container2_content ">
+                        <div className="col-12 col-lg-6 order-2 order-lg-1 pt-5 mt-lg-5 container2_content text-start">
                             <h1 className="head">Design. <span style={{
                                 backgroundImage: "linear-gradient(to right, #0062BB, #57C1C8, #E965FF)",
                                 backgroundClip: "text",
@@ -61,6 +60,7 @@ const Home = () => {
                     Coming Soon...
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
