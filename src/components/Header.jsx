@@ -27,18 +27,11 @@ const Header = () => {
     };
 
     return (
-        <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            zIndex: 1000,
-            backgroundColor: isScrolled ? 'white' : 'transparent',
-            transition: 'background-color 0.3s ease',
-            boxShadow: isScrolled ? '0 2px 4px rgba(0,0,0,0.1)' : 'none',
-            padding: '0 50px' // Added padding as requested
-        }}>
-            <nav className="navbar navbar-expand-lg">
+        <div
+            className={`custom-header fixed-top w-100 px-0 px-lg-5 ${isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}
+            style={{ transition: 'background-color 0.3s ease' }}
+        >
+            <nav className="navbar navbar-expand-lg ">
                 <div className="container-fluid pt-lg-2">
                     <Link className="navbar-brand" to="/">
                         <img className="large_logo" src={largeLogo} alt="" />
