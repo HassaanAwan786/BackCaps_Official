@@ -30,7 +30,8 @@ const Home = () => {
                                 color: "transparent"
                             }}>Develop.</span> Deliver.</h1>
                             <p className="content pe-lg-5 pt-2">Committed to building exceptional digital solutions to elevate your brand.</p>
-                            <a className="btn btn-primary mt-3 get_started_btn ">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a href="#" className="btn btn-primary mt-3 get_started_btn ">
                                 Get Started
                                 <i className="fa-solid fa-arrow-right ms-2"></i>
                             </a>

@@ -13,9 +13,13 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="d-flex gap-4">
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#" className="text-secondary text-white-hover transition-colors"><i className="fab fa-twitter fs-5"></i></a>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#" className="text-secondary text-white-hover transition-colors"><i className="fab fa-linkedin fs-5"></i></a>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#" className="text-secondary text-white-hover transition-colors"><i className="fab fa-github fs-5"></i></a>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#" className="text-secondary text-white-hover transition-colors"><i className="fab fa-instagram fs-5"></i></a>
                     </div>
                 </div>

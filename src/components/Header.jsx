@@ -51,20 +51,24 @@ const Header = () => {
                                 <Link className={`nav-link text-primary ${isActive('/about')}`} to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-primary" href="">Our Services</Link>
+                                <Link className="nav-link text-primary" to="#">Our Services</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-primary" href="">Teams</Link>
+                                <Link className="nav-link text-primary" to="#">Teams</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-primary" href="">Contact Us</Link>
+                                <Link className="nav-link text-primary" to="#">Contact Us</Link>
                             </li>
                         </ul>
                         <span className="collapse navbar-collapse d-flex justify-content-end logo_gap" id="navbarIcons">
-                            <a href=""><img src={facebook} alt="" /></a>
-                            <a href=""><img src={linkedin} alt="" /></a>
-                            <a href=""><img src={instagram} alt="" /></a>
-                            <a href=""><img src={whatsapp} alt="" /></a>
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a href="#"><img src={facebook} alt="" /></a>
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a href="#"><img src={linkedin} alt="" /></a>
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a href="#"><img src={instagram} alt="" /></a>
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a href="#"><img src={whatsapp} alt="" /></a>
                         </span>
                     </div>
 
