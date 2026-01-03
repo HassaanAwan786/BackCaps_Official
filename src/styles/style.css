@@ -152,10 +152,6 @@
         display: flex;
     }
 
-    .navbar {
-        background-color: #00449F;
-    }
-
     .links_gap {
         padding-left: 0%;
 
@@ -181,6 +177,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        padding-top: 20px;
+        /* Add space between image and text */
     }
 
     .container2_img {
@@ -188,6 +186,38 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        /* Ensure full width for centering */
+    }
+
+    /* Enhance typography for mobile */
+    .container2_content h1 {
+        font-size: 42px;
+        /* Adjusted for better scale */
+        line-height: 1.2;
+    }
+
+    .container2_content p {
+        font-size: 18px;
+        width: 100%;
+        /* Use full width available in the centered container */
+        max-width: 500px;
+        /* Limit line length for readability */
+    }
+
+    /* Proper button spacing */
+    .get_started_btn {
+        margin-top: 15px;
+    }
+
+    /* Force blue background on mobile/tablet */
+    .custom-header {
+        background-color: #00449F !important;
+    }
+
+    /* Ensure links are white on the blue background */
+    .custom-header .nav-link {
+        color: white !important;
     }
 }
 
@@ -207,12 +237,16 @@
     .nav-link {
         color: white !important;
     }
+
+
 }
 
 /* Trusted client layout */
 .image-stack {
     display: flex;
     align-items: center;
+    justify-content: inherit;
+    /* Inherit centering from parent on mobile */
     margin-top: 20px;
 }
 

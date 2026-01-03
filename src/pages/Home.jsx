@@ -22,7 +22,7 @@ const Home = () => {
 
                 <div className="container2" style={{ paddingTop: '100px' }}>
                     <div className="row">
-                        <div className="col-12 col-lg-6 order-2 order-lg-1 pt-5 mt-lg-5 container2_content text-start">
+                        <div className="col-12 col-lg-6 order-2 order-lg-1 pt-5 mt-lg-5 container2_content text-center text-lg-start">
                             <h1 className="head">Design. <span style={{
                                 backgroundImage: "linear-gradient(to right, #0062BB, #57C1C8, #E965FF)",
                                 backgroundClip: "text",
