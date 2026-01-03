@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ceo from '../assets/CEO.png';
 import coo from '../assets/COO.png';
+import Header from '../components/Header';
 const About = () => {
     const scrollRevealRefs = useRef([]);
     const counterRefs = useRef([]);
@@ -60,6 +61,9 @@ const About = () => {
 
     return (
         <div>
+            <div className="container1" style={{ backgroundColor: '#00449F' }}>
+                <Header />
+            </div>
             {/* Styles specific to About page to match original HTML style block */}
             <style>{`
             :root {
