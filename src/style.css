@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}
+.background-wrapper {
+    position: relative;
+    background: url('assets/Doodle.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh; /* Adjust to cover full height */
+}
+
+.red-rings {
+    width: 15.0rem;
+    position: absolute;
+    top: 5%; /* Starting position for the first ring */
+    right: -5%; /* Move to the right edge */
+    opacity: 0.5; /* Adjust opacity */
+    animation: ring 10s ease-in-out infinite; /* Animation for the first ring */
+}
+
+@keyframes ring {
+    0%, 20%, 100% {
+        top: 5%;
+        right: -5%;
+    }
+    70%, 90% {
+        top: -20%;
+        right: 0%;
+    }
+}
+
+.red-rings-1 {
+    width: 15.0rem;
+    position: absolute;
+    bottom: 5%; /* Starting position for the second ring */
+    left: -5%; /* Move to the left edge */
+    opacity: 0.5; /* Adjust opacity */
+    animation: ring1 15s ease-in-out infinite; /* Animation for the second ring */
+}
+
+@keyframes ring1 {
+    0%, 20%, 100% {
+        bottom: 5%;
+        left: -5%;
+    }
+    70%, 90% {
+        bottom: 20%; /* Adjust as needed */
+        left: 0%;
+    }
+}
+
+.large_logo{
+    display: flex;
+}
+.small_logo{
+    display: none;
+}
+
+.container1{
+    width: 90%;
+    margin: auto;
+}
+.logo_gap{
+    gap: 15px;
+    
+}
+.links_gap{
+    gap: 25px;
+}
+  
+.nav-padding{
+    padding-left: 20%;
+}
+.nav-item{
+   
+    transition: 0.1s;
+}
+.nav-item:hover{
+    border-bottom: 1px solid blue;
+  font-size: 16px;
+}
+.container2{
+    width: 90%;
+    margin: auto;
+}
+
+.first_img{
+width: 480.84px;
+height: 180.76px;
+}
+.head{
+    font-size: 60px;
+    font-weight:bolder;
+}
+.content{
+    width: 80%;
+    font-size: 20px;
+}
+.get_started_btn {
+    background-color: #004B8F !important;
+    border-radius: 100px !important; /* Makes the button oval */
+    padding: 10px 20px !important; /* Adjusts padding for size */
+    box-shadow: 0px -5px 10px rgba(0, 75, 143, 0.5), 0px 5px 10px rgba(0, 75, 143, 0.5); /* Adds shadow to top and bottom */
+}
+
+@media (max-width:1000px)  {
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    }
+          
+    .large_logo{
+        display: none;
+    }
+    .small_logo{
+        display: flex;
+    }
+    .navbar{
+        background-color: #00449F;
+    }
+    .links_gap{
+        padding-left: 0%;
+        
+    }
+    .nav-padding{
+        padding-left: 0%;
+    }
+    .container1{
+        width: 100%;
+       
+    }
+    .logo_gap{
+        gap: 5px;
+        
+    }
+    
+    .container2_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .container2_img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width:576px) {
+    .container2{
+        padding-top: 30px;
+    }
+    .container2_content h1{
+        font-size: 40px;
+    }
+    .container2_content p{
+        font-size: 18px;
+    }
+    .nav-link{
+        color: white !important;
+    }
+}
+/* Trusted client layout */
+.image-stack {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.stacked-image {
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%; 
+    border: 2px solid white; 
+    position: relative;
+    z-index: 1;
+    margin-left: -10px; 
+}
+
+.stacked-image:first-child {
+    margin-left: 0; 
+}
+
+.client-text {
+    margin-left: 10px; 
+    font-size: 18px;
+    color: #333; 
+    white-space: nowrap; 
+}
+/* HeadLine Effect */
+.headline-section {
+
+    position: relative;
+    width: 100%;
+    height: 90px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    background: url('assets/headline.svg') no-repeat center center;
+    background-size: cover; /* Cover the entire width */
+    overflow: hidden; /* Hides overflowing content */
+}
+
+.scrolling-text {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%; /* Full width for the scrolling text */
+    animation: scroll 15s linear infinite; /* Adjust scrolling speed */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.scrolling-text p {
+    color: #2866b7;
+    font-size: 22px; /* Adjust font size to fit the reduced height */
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.coming-soon{
+    color: #2866b7;
+    font-size: 40px; /* Adjust font size to fit the reduced height */
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
