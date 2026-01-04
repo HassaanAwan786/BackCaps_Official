@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 import '../styles/style.css'; // Importing loose css file for now
 import ring from '../assets/ring.png';
 import c1 from '../assets/c1.png';
@@ -11,18 +12,74 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Home = () => {
+    const heroRef = useRef(null);
+    const ring1Ref = useRef(null);
+    const ring2Ref = useRef(null);
+    const imagesRef = useRef(null);
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+        // Background Rings Animation (Continuous)
+        gsap.to(ring1Ref.current, {
+            rotation: 360,
+            duration: 20,
+            repeat: -1,
+            ease: "linear"
+        });
+        gsap.to(ring2Ref.current, {
+            rotation: -360,
+            duration: 25,
+            repeat: -1,
+            ease: "linear"
+        });
+
+        // Entrance Animations
+        tl.fromTo(contentRef.current.children,
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, stagger: 0.2 }
+        )
+            .fromTo(imagesRef.current.children,
+                { scale: 0.8, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 1, stagger: 0.2 },
+                "-=0.5"
+            );
+
+        // Hover Effect specific for hero images
+        const imgs = imagesRef.current.children;
+        if (imgs.length >= 2) {
+            gsap.to(imgs[0], {
+                y: -10,
+                duration: 2,
+                yoyo: true,
+                repeat: -1,
+                ease: "sine.inOut"
+            });
+            gsap.to(imgs[1], {
+                y: 10,
+                duration: 2.5,
+                yoyo: true,
+                repeat: -1,
+                ease: "sine.inOut",
+                delay: 0.5
+            });
+        }
+
+    }, []);
+
     return (
-        <div className="home-page">
+        <div className="home-page" ref={heroRef}>
             <div className="background-wrapper">
-                <img src={ring} alt="" className="red-rings" />
-                <img src={ring} alt="" className="red-rings-1" />
+                <img src={ring} alt="" className="red-rings" ref={ring1Ref} />
+                <img src={ring} alt="" className="red-rings-1" ref={ring2Ref} />
                 <div className="container1">
                     <Header />
                 </div>
 
                 <div className="container2" style={{ paddingTop: '100px' }}>
                     <div className="row">
-                        <div className="col-12 col-lg-6 order-2 order-lg-1 pt-5 mt-lg-5 container2_content text-center text-lg-start">
+                        <div className="col-12 col-lg-6 order-2 order-lg-1 pt-5 mt-lg-5 container2_content text-center text-lg-start" ref={contentRef}>
                             <h1 className="head">Design. <span style={{
                                 backgroundImage: "linear-gradient(to right, #0062BB, #57C1C8, #E965FF)",
                                 backgroundClip: "text",
@@ -30,7 +87,8 @@ const Home = () => {
                                 color: "transparent"
                             }}>Develop.</span> Deliver.</h1>
                             <p className="content pe-lg-5 pt-2">Committed to building exceptional digital solutions to elevate your brand.</p>
-                            <a className="btn btn-primary mt-3 get_started_btn ">
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a href="#" className="btn btn-primary mt-3 get_started_btn ">
                                 Get Started
                                 <i className="fa-solid fa-arrow-right ms-2"></i>
                             </a>
@@ -44,22 +102,51 @@ const Home = () => {
 
                         </div>
 
-                        <div className="col-12 col-lg-6 order-1 order-lg-2 pt-lg-4 container2_img">
+                        <div className="col-12 col-lg-6 order-1 order-lg-2 pt-lg-4 container2_img" ref={imagesRef}>
                             <img className="first_img img-fluid " src={firstImg} alt="" />
                             <img className="second_img img-fluid" src={secondImg} alt="" />
                         </div>
                     </div>
                 </div>
 
-                <div className="headline-section">
+                <div className="headline-section mt-5">
                     <div className="scrolling-text">
                         <p>We are a software company focused on enhancing your business by providing innovative and advanced solutions to your problems.</p>
                     </div>
                 </div>
-                <div className="coming-soon">
-                    Coming Soon...
-                </div>
             </div>
+            <section className="services-section p-4 bg-dark">
+                <div className="container">
+                    <h2 className="text-white text-center mb-4">Our Services</h2>
+                    <div className="row">
+                        {/* Service Items Placeholder */}
+                        <div className="col-md-4 mb-3">
+                            <div className="card bg-white text-white border-0">
+                                <div className="card-body">
+                                    <h5 className="card-title">Web Development</h5>
+                                    <p className="card-text">Building modern web applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4 mb-3">
+                            <div className="card bg-white text-white border-0">
+                                <div className="card-body">
+                                    <h5 className="card-title">App Development</h5>
+                                    <p className="card-text">Creating mobile solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4 mb-3">
+                            <div className="card bg-white text-white border-0">
+                                <div className="card-body">
+                                    <h5 className="card-title">UI/UX Design</h5>
+                                    <p className="card-text">Designing intuitive interfaces.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <Footer />
         </div>
     );

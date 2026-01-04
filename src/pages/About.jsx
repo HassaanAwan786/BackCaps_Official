@@ -296,8 +296,11 @@ const About = () => {
                                     Visionary leader with 10+ years in software industry
                                 </p>
                                 <div className="social-icons d-flex justify-content-center gap-3">
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fab fa-linkedin fs-5"></i></a>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fab fa-twitter fs-5"></i></a>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fas fa-envelope fs-5"></i></a>
                                 </div>
                             </div>
@@ -318,6 +321,7 @@ const About = () => {
                                 </p>
                                 <div className="social-icons d-flex justify-content-center gap-3">
                                     <a href="https://github.com/HassaanAwan786" className="text-secondary hover-primary transition-colors"><i className="fab fa-linkedin fs-5"></i></a>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fab fa-github fs-5"></i></a>
                                 </div>
                             </div>
@@ -341,7 +345,9 @@ const About = () => {
                                     Ensures projects are delivered on time and on budget
                                 </p>
                                 <div className="social-icons d-flex justify-content-center gap-3">
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fab fa-linkedin fs-5"></i></a>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fas fa-envelope fs-5"></i></a>
                                 </div>
                             </div>
@@ -365,8 +371,11 @@ const About = () => {
                                     Builds high-performing engineering teams
                                 </p>
                                 <div className="social-icons d-flex justify-content-center gap-3">
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fab fa-linkedin fs-5"></i></a>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fab fa-github fs-5"></i></a>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <a href="#" className="text-secondary hover-primary transition-colors"><i className="fab fa-twitter fs-5"></i></a>
                                 </div>
                             </div>
