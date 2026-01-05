@@ -70,7 +70,7 @@ const Home = () => {
 
     return (
         <div className="home-page" ref={heroRef}>
-            <div className="background-wrapper">
+            <div className="background-wrapper pb-5">
                 <img src={ring} alt="" className="red-rings" ref={ring1Ref} />
                 <img src={ring} alt="" className="red-rings-1" ref={ring2Ref} />
                 <div className="container1">
@@ -108,11 +108,10 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-
-                <div className="headline-section mt-5">
-                    <div className="scrolling-text">
-                        <p>We are a software company focused on enhancing your business by providing innovative and advanced solutions to your problems.</p>
-                    </div>
+            </div>
+            <div className="headline-section">
+                <div className="scrolling-text">
+                    <p>We are a software company focused on enhancing your business by providing innovative and advanced solutions to your problems.</p>
                 </div>
             </div>
             <section className="services-section p-4 bg-dark">
