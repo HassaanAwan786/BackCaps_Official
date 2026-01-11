@@ -1,34 +1,105 @@
 import React from 'react';
 import '../styles/style.css';
+import './Footer.css';
 
 const Footer = () => {
-    return (
-        <footer className="bg-dark text-white py-5">
-            <div className="container px-4">
-                <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                    <div className="mb-4 mb-md-0 text-center text-md-start">
-                        <h3 className="h4 fw-bold mb-3">BACKCAPS</h3>
-                        <p className="text-secondary mb-0">
-                            Delivering high-quality software solutions
-                        </p>
-                    </div>
-                    <div className="d-flex gap-4">
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <a href="#" className="text-secondary text-white-hover transition-colors"><i className="fab fa-twitter fs-5"></i></a>
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <a href="#" className="text-secondary text-white-hover transition-colors"><i className="fab fa-linkedin fs-5"></i></a>
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <a href="#" className="text-secondary text-white-hover transition-colors"><i className="fab fa-github fs-5"></i></a>
-                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                        <a href="#" className="text-secondary text-white-hover transition-colors"><i className="fab fa-instagram fs-5"></i></a>
-                    </div>
-                </div>
-                <div className="border-top border-secondary mt-4 pt-4 text-small text-secondary text-center">
-                    © 2023 BACKCAPS. All rights reserved.
-                </div>
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        {/* Top Section */}
+        <div className="footer-top">
+          <div className="footer-brand">
+            <h1 className="logo">BACKCAPS</h1>
+            <p className="tagline">
+              Transforming ideas into powerful digital solutions through innovation, expertise, and passion.
+            </p>
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-text">hello@backcaps.com</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-text">+1 (555) 123-4567</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-text">Silicon Valley, CA</span>
+              </div>
             </div>
-        </footer>
-    );
+          </div>
+
+          {/* Links Section - 2 columns layout */}
+          <div className="footer-links-grid">
+            {/* Column 1 */}
+            <div className="links-column">
+              <h3 className="column-title">Company</h3>
+              <ul className="links-list">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press Kit</a></li>
+              </ul>
+            </div>
+
+            {/* Column 2 */}
+            <div className="links-column">
+              <h3 className="column-title">Services</h3>
+              <ul className="links-list">
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">AI Solutions</a></li>
+              </ul>
+            </div>
+
+            {/* Column 3 */}
+            <div className="links-column">
+              <h3 className="column-title">Resources</h3>
+              <ul className="links-list">
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="footer-divider"></div>
+
+        {/* Newsletter Section */}
+        <div className="newsletter-section">
+          <div className="newsletter-content">
+            <div className="newsletter-text-content">
+              <h3 className="newsletter-title">Stay Updated</h3>
+              <p className="newsletter-text">Subscribe to our newsletter for the latest updates</p>
+            </div>
+            <div className="newsletter-form">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                className="newsletter-input"
+                aria-label="Email for newsletter subscription"
+              />
+              <button type="submit" className="newsletter-button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="footer-divider"></div>
+
+        {/* Bottom Section */}
+        <div className="footer-bottom">
+          <div className="copyright">
+            © 2026 Backcaps Software Solutions. All rights reserved.
+          </div>
+          <div className="slogan">
+            "Where Backspace Meets Ambition - Digital Solutions, Perfectly Keyed"
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
