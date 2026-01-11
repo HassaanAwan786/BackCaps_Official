@@ -365,3 +365,8 @@
     z-index: 2;
     pointer-events: none;
 }
+
+.service-page .background-wrapper::after,
+.service-page .services-section::before {
+    display: none;
+}

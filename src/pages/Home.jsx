@@ -10,6 +10,7 @@ import firstImg from '../assets/first.png';
 import secondImg from '../assets/second_img.svg';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ServicesSection from '../components/ServicesSection';
 
 const Home = () => {
     const heroRef = useRef(null);
@@ -109,43 +110,13 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
             <div className="headline-section">
                 <div className="scrolling-text">
                     <p>We are a software company focused on enhancing your business by providing innovative and advanced solutions to your problems.</p>
                 </div>
             </div>
-            <section className="services-section p-4 bg-dark">
-                <div className="container">
-                    <h2 className="text-white text-center mb-4">Our Services</h2>
-                    <div className="row">
-                        {/* Service Items Placeholder */}
-                        <div className="col-md-4 mb-3">
-                            <div className="card bg-white text-white border-0">
-                                <div className="card-body">
-                                    <h5 className="card-title">Web Development</h5>
-                                    <p className="card-text">Building modern web applications.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 mb-3">
-                            <div className="card bg-white text-white border-0">
-                                <div className="card-body">
-                                    <h5 className="card-title">App Development</h5>
-                                    <p className="card-text">Creating mobile solutions.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 mb-3">
-                            <div className="card bg-white text-white border-0">
-                                <div className="card-body">
-                                    <h5 className="card-title">UI/UX Design</h5>
-                                    <p className="card-text">Designing intuitive interfaces.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <ServicesSection />
             <Footer />
         </div>
     );
