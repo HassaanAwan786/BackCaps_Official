@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../styles/style.css';
 import './Footer.css';
 import FooterB from '../assets/Footer_B.png';
-import mail from '../assets/mail.png';
-import Call from '../assets/Call.png';
-import location from '../assets/location.png';
 import facebookIcon from '../assets/Facebook - Original.png';
 import linkedinIcon from '../assets/LinkedIn - Original.png';
 import instagramIcon from '../assets/Instagram - Original.png';
@@ -41,15 +38,15 @@ const Footer = () => {
             </p>
             <div className="contact-info">
               <div className="contact-item">
-                <img src={mail} alt="Email" className="contact-icon" />
+                <i className="fa-regular fa-envelope contact-icon"></i>
                 <span className="contact-text">backcaps.official@gmail.com</span>
               </div>
               <div className="contact-item">
-                <img src={Call} alt="Phone" className="contact-icon" />
+                <i className="fas fa-phone-alt contact-icon"></i>
                 <span className="contact-text">+92 307-5195-911</span>
               </div>
               <div className="contact-item">
-                <img src={location} alt="Location" className="contact-icon" />
+                <i className="fas fa-map-marker-alt contact-icon"></i>
                 <span className="contact-text">Islamabad, Pakistan</span>
               </div>
             </div>

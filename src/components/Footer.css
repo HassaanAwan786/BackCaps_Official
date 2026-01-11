@@ -55,6 +55,7 @@
   max-width: 400px;
   font-size: 1.1rem;
   text-align: left;
+  
 }
 
 .contact-info {
@@ -68,19 +69,17 @@
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: transparent;
+  gap: 12px;
+  color: #cccccc;
   font-size: 0.95rem;
-
 }
 
 .contact-icon {
-  width: 0px;
-  height: 0px;
+  width: auto;
+  height: auto;
+  font-size: 1.2rem;
+  color: #57C1C8;
   flex-shrink: 0;
-  object-fit: contain;
-  color: transparent;
- 
 }
 
 .contact-text {
@@ -94,7 +93,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 200px;
   min-width: 500px;
-
 }
 
 .links-column {
