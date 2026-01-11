@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/style.css';
 import './Footer.css';
 import FooterB from '../assets/Footer_B.png';
-import mailIcon from '../assets/mail.png';
-import callIcon from '../assets/Call.png';
-import locationIcon from '../assets/location.png';
-import { Link, useLocation } from 'react-router-dom';
+import mail from '../assets/mail.png';
+import Call from '../assets/Call.png';
+import location from '../assets/location.png';
+import facebookIcon from '../assets/Facebook - Original.png';
+import linkedinIcon from '../assets/LinkedIn - Original.png';
+import instagramIcon from '../assets/Instagram - Original.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -23,21 +41,21 @@ const Footer = () => {
             </p>
             <div className="contact-info">
               <div className="contact-item">
-                <img src={mailIcon} alt="Email" className="contact-icon" />
+                <img src={mail} alt="Email" className="contact-icon" />
                 <span className="contact-text">backcaps.official@gmail.com</span>
               </div>
               <div className="contact-item">
-                <img src={callIcon} alt="Phone" className="contact-icon" />
+                <img src={Call} alt="Phone" className="contact-icon" />
                 <span className="contact-text">+92 307-5195-911</span>
               </div>
               <div className="contact-item">
-                <img src={locationIcon} alt="Location" className="contact-icon" />
+                <img src={location} alt="Location" className="contact-icon" />
                 <span className="contact-text">Islamabad, Pakistan</span>
               </div>
             </div>
           </div>
 
-          {/* Links Section - 2 columns layout */}
+          {/* Links Section - 3 columns layout */}
           <div className="footer-links-grid">
             {/* Column 1 */}
             <div className="links-column">
@@ -85,9 +103,9 @@ const Footer = () => {
               <p className="newsletter-text">Subscribe to our newsletter for the latest updates</p>
             </div>
             <div className="newsletter-form">
-              <input
-                type="email"
-                placeholder="Enter your email"
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
                 className="newsletter-input"
                 aria-label="Email for newsletter subscription"
               />
@@ -101,13 +119,41 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="footer-bottom">
+          <div className="social-media-icons">
+            <a href="#" aria-label="Facebook">
+              <img src={facebookIcon} alt="Facebook" className="social-icon" />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <div className="social-icon twitter-icon">𝕏</div>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <img src={linkedinIcon} alt="LinkedIn" className="social-icon" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src={instagramIcon} alt="Instagram" className="social-icon" />
+            </a>
+            <a href="#" aria-label="Share">
+              <div className="social-icon share-icon">🔖</div>
+            </a>
+          </div>
           <div className="copyright">
             © 2026 Backcaps Software Solutions. All rights reserved.
           </div>
-          <div className="slogan">
-            "Where Backspace Meets Ambition - Digital Solutions, Perfectly Keyed"
-          </div>
         </div>
+      </div>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button className="scroll-to-top-btn" onClick={scrollToTop} aria-label="Scroll to top">
+          <i className="fas fa-arrow-up"></i>
+        </button>
+      )}
+
+      {/* Bottommost Tagline Bar */}
+      <div className="footer-tagline-bar">
+        <p className="tagline-text">
+          "Where Backspace Meets Ambition - Digital Solutions, Perfectly Keyed"
+        </p>
       </div>
     </footer>
   );
