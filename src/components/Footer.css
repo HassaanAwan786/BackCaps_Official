@@ -34,6 +34,16 @@
   color: #ffffff;
   text-align: left;
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .tagline {
@@ -56,15 +66,16 @@
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   color: #cccccc;
   font-size: 0.95rem;
 }
 
-.contact-item::before {
-  content: "•";
-  color: #cccccc;
-  font-size: 1.2rem;
+.contact-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .contact-text {

@@ -1,6 +1,10 @@
 import React from 'react';
 import '../styles/style.css';
 import './Footer.css';
+import FooterB from '../assets/Footer_B.png';
+import mailIcon from '../assets/mail.png';
+import callIcon from '../assets/Call.png';
+import locationIcon from '../assets/location.png';
 
 const Footer = () => {
   return (
@@ -9,19 +13,25 @@ const Footer = () => {
         {/* Top Section */}
         <div className="footer-top">
           <div className="footer-brand">
-            <h1 className="logo">BACKCAPS</h1>
+            <h1 className="logo">
+              <img src={FooterB} alt="Backcaps Logo" className="logo-icon" />
+              BACKCAPS
+            </h1>
             <p className="tagline">
               Transforming ideas into powerful digital solutions through innovation, expertise, and passion.
             </p>
             <div className="contact-info">
               <div className="contact-item">
+                <img src={mailIcon} alt="Email" className="contact-icon" />
                 <span className="contact-text">backcaps.official@gmail.com</span>
               </div>
               <div className="contact-item">
-                <span className="contact-text">+1 (555) 123-4567</span>
+                <img src={callIcon} alt="Phone" className="contact-icon" />
+                <span className="contact-text">+92 307-5195-911</span>
               </div>
               <div className="contact-item">
-                <span className="contact-text">Silicon Valley, CA</span>
+                <img src={locationIcon} alt="Location" className="contact-icon" />
+                <span className="contact-text">Islamabad, Pakistan</span>
               </div>
             </div>
           </div>
