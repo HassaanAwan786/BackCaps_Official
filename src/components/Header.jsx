@@ -54,7 +54,7 @@ const Header = () => {
                                 <Link className={`nav-link text-primary ${isActive('/service')}`} to="/service">Our Services</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-primary" to="#">Teams</Link>
+                                <Link className={`nav-link text-primary ${isActive('/team')}`} to="/team">Team</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-primary" to="#">Contact Us</Link>

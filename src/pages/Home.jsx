@@ -11,6 +11,7 @@ import secondImg from '../assets/second_img.svg';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ServicesSection from '../components/ServicesSection';
+import TeamSection from '../components/TeamSection';
 
 const Home = () => {
     const heroRef = useRef(null);
@@ -117,6 +118,7 @@ const Home = () => {
                 </div>
             </div>
             <ServicesSection />
+            <TeamSection />
             <Footer />
         </div>
     );

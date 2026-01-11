@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="links-column">
               <h3 className="column-title">Company</h3>
               <ul className="links-list">
-                <li><a href="#">About Us</a></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()}>About Us</a></li>
                 <li><a href="#">Careers</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Press Kit</a></li>
