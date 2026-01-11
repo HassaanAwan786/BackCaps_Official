@@ -5,6 +5,7 @@ import FooterB from '../assets/Footer_B.png';
 import mailIcon from '../assets/mail.png';
 import callIcon from '../assets/Call.png';
 import locationIcon from '../assets/location.png';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -53,10 +54,10 @@ const Footer = () => {
             <div className="links-column">
               <h3 className="column-title">Services</h3>
               <ul className="links-list">
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">Mobile Apps</a></li>
-                <li><a href="#">UI/UX Design</a></li>
-                <li><a href="#">AI Solutions</a></li>
+                <li><Link to="/service">Web Development</Link></li>
+                <li><Link to="/service">Mobile Apps</Link></li>
+                <li><Link to="/service">UI/UX Design</Link></li>
+                <li><Link to="/service">AI Solutions</Link></li>
               </ul>
             </div>
 
@@ -84,9 +85,9 @@ const Footer = () => {
               <p className="newsletter-text">Subscribe to our newsletter for the latest updates</p>
             </div>
             <div className="newsletter-form">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
+              <input
+                type="email"
+                placeholder="Enter your email"
                 className="newsletter-input"
                 aria-label="Email for newsletter subscription"
               />

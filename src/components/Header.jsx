@@ -29,7 +29,7 @@ const Header = () => {
     return (
         <div
             className={`custom-header fixed-top w-100 px-0 px-lg-5 ${isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}
-            style={{ transition: 'background-color 0.3s ease' }}
+            style={{ transition: 'all 0.5s ease-in-out' }}
         >
             <nav className="navbar navbar-expand-lg ">
                 <div className="container-fluid pt-lg-2">
@@ -51,7 +51,7 @@ const Header = () => {
                                 <Link className={`nav-link text-primary ${isActive('/about')}`} to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link text-primary" to="#">Our Services</Link>
+                                <Link className={`nav-link text-primary ${isActive('/service')}`} to="/service">Our Services</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link text-primary" to="#">Teams</Link>
