@@ -21,6 +21,9 @@
 .footer-brand {
   flex: 1;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .logo {
@@ -29,6 +32,8 @@
   letter-spacing: 1px;
   margin-bottom: 20px;
   color: #ffffff;
+  text-align: left;
+  width: 100%;
 }
 
 .tagline {
@@ -37,12 +42,15 @@
   margin-bottom: 25px;
   max-width: 400px;
   font-size: 1.1rem;
+  text-align: left;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .contact-item {
@@ -75,6 +83,8 @@
 .links-column {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .column-title {
@@ -84,12 +94,15 @@
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-align: left;
 }
 
 .links-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: left;
+  width: 100%;
 }
 
 .links-list li {
@@ -102,6 +115,7 @@
   font-size: 0.95rem;
   transition: color 0.2s ease;
   display: inline-block;
+  text-align: left;
 }
 
 .links-list a:hover {
@@ -294,7 +308,8 @@
   }
   
   .links-column {
-    text-align: center;
+    text-align: left;
+    align-items: flex-start;
   }
   
   .newsletter-content {
@@ -320,16 +335,16 @@
   
   .logo {
     font-size: 1.8rem;
-    text-align: center;
+    text-align: left;
   }
   
   .tagline {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .contact-info {
-    align-items: center;
+    align-items: flex-start;
   }
 }

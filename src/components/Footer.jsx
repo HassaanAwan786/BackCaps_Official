@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
             <div className="contact-info">
               <div className="contact-item">
-                <span className="contact-text">hello@backcaps.com</span>
+                <span className="contact-text">backcaps.official@gmail.com</span>
               </div>
               <div className="contact-item">
                 <span className="contact-text">+1 (555) 123-4567</span>
