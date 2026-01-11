@@ -265,10 +265,12 @@
   .footer-top {
     flex-direction: column;
     gap: 40px;
+    align-items: center;
   }
   
   .footer-brand {
     min-width: 100%;
+    align-items: center;
   }
   
   .footer-links-grid {
@@ -279,26 +281,57 @@
   
   .logo {
     font-size: 2rem;
+    text-align: center;
+    justify-content: center;
   }
   
   .tagline {
     font-size: 1rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-info {
+    align-items: center;
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
+  
+  .links-column {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .column-title {
+    text-align: center;
+  }
+  
+  .links-list {
+    text-align: center;
+  }
+  
+  .links-list a {
+    text-align: center;
   }
   
   .newsletter-content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
   }
   
   .newsletter-text-content {
-    text-align: left;
+    text-align: center;
     width: 100%;
   }
   
   .newsletter-form {
     width: 100%;
     flex-direction: row;
+    justify-content: center;
   }
   
   .newsletter-input {
@@ -319,8 +352,20 @@
   }
   
   .links-column {
-    text-align: left;
-    align-items: flex-start;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .column-title {
+    text-align: center;
+  }
+  
+  .links-list {
+    text-align: center;
+  }
+  
+  .links-list a {
+    text-align: center;
   }
   
   .newsletter-content {
@@ -346,16 +391,21 @@
   
   .logo {
     font-size: 1.8rem;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
   }
   
   .tagline {
-    text-align: left;
-    margin-left: 0;
-    margin-right: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .contact-info {
-    align-items: flex-start;
+    align-items: center;
+  }
+  
+  .contact-item {
+    justify-content: center;
   }
 }
